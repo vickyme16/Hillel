@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let value = prompt('Enter any number with length 2:');
+
+    let lastDigit = value % 10;
+    let firstDigit = (value - lastDigit) / 10;
+
+    if (firstDigit > lastDigit) {
+        console.log(`${firstDigit} is bigger than ${lastDigit}`);
+    } else if (firstDigit < lastDigit) {
+        console.log(`${lastDigit} is bigger than ${firstDigit}`);
+    } else {
+        console.log('They are equals');
+    }
+</script>
+</body>
+</html>
