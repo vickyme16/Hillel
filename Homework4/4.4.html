@@ -7,29 +7,19 @@
 <body>
 <script>
     let numOrStr = prompt('input number or string');
-    console.log(numOrStr)
 
-    switch (numOrStr) {
-        case null:
-            console.log('ви скасували');
+    switch (true) {
+        case numOrStr === null:
+            console.log('you canceled');
             break;
-
-        default:
-            console.log('OK!');
+        case numOrStr.trim() === '':
+            console.log('');
             break;
-    }
-
-    switch (numOrStr.trim()) {
-
-        case '':
-            console.log('OK!');
-            break;
-    }
-
-    switch (isNaN(+numOrStr)) {
-        case true:
+        case isNaN(+numOrStr):
             console.log(' number is Ba_NaN');
             break;
+        default:
+            console.log('OK!');
     }
 </script>
 </body>
