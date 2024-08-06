@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let value = prompt('Enter any numbers with length 3:');
+
+    let lastDigit = value % 10;
+    value -= lastDigit;
+    value /= 10;
+
+    let secondDigit = value % 10;
+    value -= secondDigit;
+    value /= 10;
+
+    let firstDigit = value;
+
+    if (firstDigit === secondDigit && firstDigit === lastDigit ) {
+        console.log('All the numbers are equal');
+    } else if (firstDigit === secondDigit || secondDigit === lastDigit || firstDigit === lastDigit) {
+        console.log('Two digits are equal');
+    } else {
+        console.log('No equal digits');
+    }
+</script>
+</body>
+</html>
